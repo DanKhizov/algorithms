@@ -1,11 +1,11 @@
-var bracers1 = "()";
-var bracers2 = "()[]{}";
-var bracers3 = "(|";
-var bracers4 = "(|)]";
-var bracers5 = "{[]}";
+let testCase1 = "()";
+let testCase2 = "()[]{}";
+let testCase3 = "(|";
+let testCase4 = "(|)]";
+let testCase5 = "{[]}";
 
 function isCorrect(str) {
-    var stack = [];
+    let stack = [];
     for (let i = 0; i < str.length; i++) {
         if (str[i] === "[" || str[i] === "(" || str[i] === "{") {
             stack.push(str[i]);
@@ -13,7 +13,7 @@ function isCorrect(str) {
             if (stack.length === 0) {
                 return false;
             }
-            var top = stack.pop();
+            let top = stack.pop();
             if (top === "[" && str[i] !== "]") return false;
             if (top === "(" && str[i] !== ")") return false;
             if (top === "{" && str[i] !== "}") return false;
@@ -22,8 +22,8 @@ function isCorrect(str) {
     return stack.length === 0 ? true : false;
 }
 
-console.log(isCorrect(bracers1));
-console.log(isCorrect(bracers2));
-console.log(isCorrect(bracers3));
-console.log(isCorrect(bracers4));
-console.log(isCorrect(bracers5));
+console.log(isCorrect(testCase1)); // true
+console.log(isCorrect(testCase2)); // true
+console.log(isCorrect(testCase3)); // false
+console.log(isCorrect(testCase4)); // false
+console.log(isCorrect(testCase5)); // true

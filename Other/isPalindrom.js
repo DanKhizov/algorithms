@@ -1,14 +1,14 @@
-var s1 = "abba";
-var s2 = "a Bb  a";
-var s3 = "bba";
-var s4 = "aba";
+let testCase1 = "abba";
+let testCase2 = "a Bb  a";
+let testCase3 = "bba";
+let testCase4 = "aba";
 
 function isPalindrom(s) {
-    var regex = /\s/g;
+    let regex = /\s/g;
 
     s = s.replace(regex, "").toLowerCase();
 
-    for (var i = 0; i < s.length / 2; i++) {
+    for (let i = 0; i < s.length / 2; i++) {
         if (s[i] !== s[s.length - 1 - i]) {
             return false;
         }
@@ -16,7 +16,7 @@ function isPalindrom(s) {
     return true;
 }
 
-console.log(isPalindrom(s1)); // true
-console.log(isPalindrom(s2)); // true
-console.log(isPalindrom(s3)); // false
-console.log(isPalindrom(s4)); // true
+console.log(isPalindrom(testCase1)); // true
+console.log(isPalindrom(testCase2)); // true
+console.log(isPalindrom(testCase3)); // false
+console.log(isPalindrom(testCase4)); // true
