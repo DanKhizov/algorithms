@@ -1,10 +1,10 @@
 let paragraph = "Bob hit a ball, the hit BALL flew far after it was hit";
 
 function fillArray(paragraph) {
-    let newWord = "",
-        regexp = /,/,
-        freq = {},
-        max = 0;
+    let newWord = "";
+    let regexp = /,/;
+    let freq = {};
+    let max = 0;
 
     paragraph = paragraph.replace(regexp, "").toLowerCase();
     paragraph += " ";

@@ -1,9 +1,9 @@
 let arr = [1, 2, 5, 6, 8, 10, 12, 15, 19, 25, 28];
 
 function binarySearch(arr, num) {
-    let min = 0,
-        max = arr.length - 1,
-        mid = 0;
+    let min = 0;
+    let max = arr.length - 1;
+    let mid = 0;
 
     while (min <= max) {
         mid = Math.floor((max + min) / 2);

@@ -1,8 +1,8 @@
 let arr = [12, 2, 45, 6, 32, 357, 24, 6346, 123, 75];
 
 function combSorting(arr) {
-    let factor = 1.247,
-        gapFactor = arr.length / factor;
+    let factor = 1.247;
+    let gapFactor = arr.length / factor;
 
     while (gapFactor > 1) {
         let gap = Math.round(gapFactor);

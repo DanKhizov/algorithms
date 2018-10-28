@@ -30,13 +30,13 @@ const binString = (x, y) => {
 	return { a, b };
 };
 
-let sumNums = binString(5205, 42),
-	p = 0,
-	s = '';
+let sumNums = binString(5205, 42);
+let = 0;
+let s = '';
 
 for (let i = sumNums.a.length - 1; i >= 0; i--) {
-	let a = sumNums.a[i],
-		b = sumNums.b[i];
+	let a = sumNums.a[i];
+	let	b = sumNums.b[i];
 
 	s += p ^ (b ^ a);
 	p = (p & (a ^ b)) | (a & b);
